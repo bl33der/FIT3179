@@ -5,8 +5,6 @@
   "width": 500,
   "height": 340,
   "title": {
-    "text": "Smoking Share by State (%)",
-    "subtitle": "Bars sorted by % with national average reference",
     "frame": "group"
   },
   "style": "cell",
@@ -14,13 +12,22 @@
     {
       "name": "source_0",
       "url": "https://raw.githubusercontent.com/bl33der/FIT3179/refs/heads/main/data/Smokers_by_state.csv",
-      "format": {"type": "csv", "delimiter": ","},
+      "format": {
+        "type": "csv",
+        "delimiter": ","
+      },
       "transform": [
         {
           "type": "joinaggregate",
-          "as": ["avg_pct"],
-          "ops": ["mean"],
-          "fields": ["Percentage"]
+          "as": [
+            "avg_pct"
+          ],
+          "ops": [
+            "mean"
+          ],
+          "fields": [
+            "Percentage"
+          ]
         },
         {
           "type": "formula",
@@ -35,10 +42,22 @@
       "transform": [
         {
           "type": "stack",
-          "groupby": ["State"],
+          "groupby": [
+            "State"
+          ],
           "field": "Percentage",
-          "sort": {"field": ["pos"], "order": ["descending"]},
-          "as": ["Percentage_start", "Percentage_end"],
+          "sort": {
+            "field": [
+              "pos"
+            ],
+            "order": [
+              "descending"
+            ]
+          },
+          "as": [
+            "Percentage_start",
+            "Percentage_end"
+          ],
           "offset": "zero"
         },
         {
@@ -74,9 +93,15 @@
         {
           "type": "aggregate",
           "groupby": [],
-          "ops": ["mean"],
-          "fields": ["Percentage"],
-          "as": ["avg_pct"]
+          "ops": [
+            "mean"
+          ],
+          "fields": [
+            "Percentage"
+          ],
+          "as": [
+            "avg_pct"
+          ]
         },
         {
           "type": "filter",
@@ -92,7 +117,9 @@
         "facet": {
           "data": "data_1",
           "name": "stack_group_layer_0_main",
-          "groupby": ["State"],
+          "groupby": [
+            "State"
+          ],
           "aggregate": {
             "fields": [
               "Percentage_start",
@@ -100,23 +127,39 @@
               "Percentage_end",
               "Percentage_end"
             ],
-            "ops": ["min", "max", "min", "max"]
+            "ops": [
+              "min",
+              "max",
+              "min",
+              "max"
+            ]
           }
         }
       },
       "encode": {
         "update": {
-          "x": {"scale": "x", "field": "State"},
-          "width": {"signal": "max(0.25, bandwidth('x'))"},
+          "x": {
+            "scale": "x",
+            "field": "State"
+          },
+          "width": {
+            "signal": "max(0.25, bandwidth('x'))"
+          },
           "y": {
             "signal": "min(scale('y',datum[\"min_Percentage_start\"]),scale('y',datum[\"max_Percentage_start\"]),scale('y',datum[\"min_Percentage_end\"]),scale('y',datum[\"max_Percentage_end\"]))"
           },
           "y2": {
             "signal": "max(scale('y',datum[\"min_Percentage_start\"]),scale('y',datum[\"max_Percentage_start\"]),scale('y',datum[\"min_Percentage_end\"]),scale('y',datum[\"max_Percentage_end\"]))"
           },
-          "clip": {"value": true},
-          "cornerRadiusTopLeft": {"value": 3},
-          "cornerRadiusTopRight": {"value": 3}
+          "clip": {
+            "value": true
+          },
+          "cornerRadiusTopLeft": {
+            "value": 3
+          },
+          "cornerRadiusTopRight": {
+            "value": 3
+          }
         }
       },
       "marks": [
@@ -124,29 +167,57 @@
           "type": "group",
           "encode": {
             "update": {
-              "y": {"field": {"group": "y"}, "mult": -1},
-              "width": {"field": {"group": "width"}}
+              "y": {
+                "field": {
+                  "group": "y"
+                },
+                "mult": -1
+              },
+              "width": {
+                "field": {
+                  "group": "width"
+                }
+              }
             }
           },
           "marks": [
             {
               "name": "layer_0_marks",
               "type": "rect",
-              "style": ["bar"],
-              "from": {"data": "stack_group_layer_0_main"},
+              "style": [
+                "bar"
+              ],
+              "from": {
+                "data": "stack_group_layer_0_main"
+              },
               "encode": {
                 "update": {
                   "tooltip": {
                     "signal": "{\"State\": isValid(datum[\"State\"]) ? datum[\"State\"] : \"\"+datum[\"State\"], \"%\": isValid(datum[\"Percentage\"]) ? datum[\"Percentage\"] : \"\"+datum[\"Percentage\"], \"Smokers (k)\": isValid(datum[\"Smoker\"]) ? datum[\"Smoker\"] : \"\"+datum[\"Smoker\"], \"Population (k)\": isValid(datum[\"Population\"]) ? datum[\"Population\"] : \"\"+datum[\"Population\"]}"
                   },
-                  "fill": {"scale": "color", "field": "pos"},
-                  "ariaRoleDescription": {"value": "bar"},
+                  "fill": {
+                    "scale": "color",
+                    "field": "pos"
+                  },
+                  "ariaRoleDescription": {
+                    "value": "bar"
+                  },
                   "description": {
                     "signal": "\"State: \" + (isValid(datum[\"State\"]) ? datum[\"State\"] : \"\"+datum[\"State\"]) + \"; Percentage (%): \" + (format(datum[\"Percentage\"], \"\")) + \"; pos: \" + (isValid(datum[\"pos\"]) ? datum[\"pos\"] : \"\"+datum[\"pos\"]) + \"; %: \" + (isValid(datum[\"Percentage\"]) ? datum[\"Percentage\"] : \"\"+datum[\"Percentage\"]) + \"; Smokers (k): \" + (isValid(datum[\"Smoker\"]) ? datum[\"Smoker\"] : \"\"+datum[\"Smoker\"]) + \"; Population (k): \" + (isValid(datum[\"Population\"]) ? datum[\"Population\"] : \"\"+datum[\"Population\"])"
                   },
-                  "width": {"field": {"group": "width"}},
-                  "y": {"scale": "y", "field": "Percentage_end"},
-                  "y2": {"scale": "y", "field": "Percentage_start"}
+                  "width": {
+                    "field": {
+                      "group": "width"
+                    }
+                  },
+                  "y": {
+                    "scale": "y",
+                    "field": "Percentage_end"
+                  },
+                  "y2": {
+                    "scale": "y",
+                    "field": "Percentage_start"
+                  }
                 }
               }
             }
@@ -157,61 +228,128 @@
     {
       "name": "layer_1_marks",
       "type": "rule",
-      "style": ["rule"],
-      "from": {"data": "data_2"},
+      "style": [
+        "rule"
+      ],
+      "from": {
+        "data": "data_2"
+      },
       "encode": {
         "update": {
-          "stroke": {"value": "#ef4444"},
-          "strokeDash": {"value": [6, 4]},
+          "stroke": {
+            "value": "#ef4444"
+          },
+          "strokeDash": {
+            "value": [
+              6,
+              4
+            ]
+          },
           "description": {
             "signal": "\"avg_pct: \" + (format(datum[\"avg_pct\"], \"\"))"
           },
-          "x": {"field": {"group": "width"}},
-          "x2": {"value": 0},
-          "y": {"scale": "y", "field": "avg_pct"}
+          "x": {
+            "field": {
+              "group": "width"
+            }
+          },
+          "x2": {
+            "value": 0
+          },
+          "y": {
+            "scale": "y",
+            "field": "avg_pct"
+          }
         }
       }
     },
     {
       "name": "layer_2_marks",
       "type": "text",
-      "style": ["text"],
-      "from": {"data": "data_3"},
+      "style": [
+        "text"
+      ],
+      "from": {
+        "data": "data_3"
+      },
       "encode": {
         "update": {
-          "dy": {"value": -4},
-          "fontSize": {"value": 11},
-          "fill": {"value": "black"},
+          "dy": {
+            "value": -4
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "black"
+          },
           "description": {
             "signal": "\"State: \" + (isValid(datum[\"State\"]) ? datum[\"State\"] : \"\"+datum[\"State\"]) + \"; Percentage: \" + (format(datum[\"Percentage\"], \"\"))"
           },
-          "x": {"scale": "x", "field": "State", "band": 0.5},
-          "y": {"scale": "y", "field": "Percentage"},
-          "text": {"signal": "format(datum[\"Percentage\"], \".1f\")"},
-          "align": {"value": "center"},
-          "baseline": {"value": "middle"}
+          "x": {
+            "scale": "x",
+            "field": "State",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "y",
+            "field": "Percentage"
+          },
+          "text": {
+            "signal": "format(datum[\"Percentage\"], \".1f\")"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          }
         }
       }
     },
     {
       "name": "layer_3_marks",
       "type": "text",
-      "style": ["text"],
-      "from": {"data": "data_4"},
+      "style": [
+        "text"
+      ],
+      "from": {
+        "data": "data_4"
+      },
       "encode": {
         "update": {
-          "align": {"value": "left"},
-          "dx": {"value": 6},
-          "dy": {"value": -6},
-          "fontSize": {"value": 11},
-          "fill": {"value": "#ef4444"},
+          "align": {
+            "value": "left"
+          },
+          "dx": {
+            "value": 6
+          },
+          "dy": {
+            "value": -6
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#ef4444"
+          },
           "description": {
             "signal": "\"avg_pct: \" + (format(datum[\"avg_pct\"], \"\"))"
           },
-          "x": {"signal": "width", "mult": 0.5},
-          "y": {"scale": "y", "field": "avg_pct"},
-          "text": {"value": ""},
-          "baseline": {"value": "middle"}
+          "x": {
+            "signal": "width",
+            "mult": 0.8
+          },
+          "y": {
+            "scale": "y",
+            "field": "avg_pct"
+          },
+          "text": {
+            "value": "national average"
+          },
+          "baseline": {
+            "value": "middle"
+          }
         }
       }
     }
@@ -223,9 +361,18 @@
       "domain": {
         "data": "source_0",
         "field": "State",
-        "sort": {"op": "sum", "field": "Percentage", "order": "descending"}
+        "sort": {
+          "op": "sum",
+          "field": "Percentage",
+          "order": "descending"
+        }
       },
-      "range": [0, {"signal": "width"}],
+      "range": [
+        0,
+        {
+          "signal": "width"
+        }
+      ],
       "paddingInner": 0.1,
       "paddingOuter": 0.05
     },
@@ -234,22 +381,48 @@
       "type": "linear",
       "domain": {
         "fields": [
-          {"data": "data_1", "field": "Percentage_start"},
-          {"data": "data_1", "field": "Percentage_end"},
-          {"data": "data_2", "field": "avg_pct"},
-          {"data": "data_3", "field": "Percentage"},
-          {"data": "data_4", "field": "avg_pct"}
+          {
+            "data": "data_1",
+            "field": "Percentage_start"
+          },
+          {
+            "data": "data_1",
+            "field": "Percentage_end"
+          },
+          {
+            "data": "data_2",
+            "field": "avg_pct"
+          },
+          {
+            "data": "data_3",
+            "field": "Percentage"
+          },
+          {
+            "data": "data_4",
+            "field": "avg_pct"
+          }
         ]
       },
-      "range": [{"signal": "height"}, 0],
+      "range": [
+        {
+          "signal": "height"
+        },
+        0
+      ],
       "nice": true,
       "zero": true
     },
     {
       "name": "color",
       "type": "ordinal",
-      "domain": ["Above avg", "Below avg"],
-      "range": ["#5B9BD5", "#A0AEC0"]
+      "domain": [
+        "Above avg",
+        "Below avg"
+      ],
+      "range": [
+        "#5B9BD5",
+        "#A0AEC0"
+      ]
     }
   ],
   "axes": [
@@ -258,7 +431,9 @@
       "orient": "left",
       "gridScale": "x",
       "grid": true,
-      "tickCount": {"signal": "ceil(height/40)"},
+      "tickCount": {
+        "signal": "ceil(height/40)"
+      },
       "domain": false,
       "labels": false,
       "aria": false,
@@ -282,7 +457,9 @@
       "grid": false,
       "title": "Percentage (%)",
       "labelOverlap": true,
-      "tickCount": {"signal": "ceil(height/40)"},
+      "tickCount": {
+        "signal": "ceil(height/40)"
+      },
       "zindex": 0
     }
   ],
@@ -294,5 +471,11 @@
       "symbolType": "square"
     }
   ],
-  "config": {"style": {"cell": {"stroke": null}}}
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": null
+      }
+    }
+  }
 }

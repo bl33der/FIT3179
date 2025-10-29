@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Smoking in Australia</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vega stack -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Smoking in Transition: Australia’s Changing Relationship with Tobacco</h1>
+        <p id="mainheading">
+            Smoking remains one of the leading preventable causes of death worldwide, yet Australia stands out for its
+            long-term decline in tobacco use. This visual story explores the changing patterns of smoking across the
+            country: by state, gender, age, and community, and compares them globally. Through these data-driven
+            insights, we uncover where progress has been greatest, which groups remain at risk, and how Australia’s
+            tobacco control policies continue to shape healthier futures.
+        </p>
+
+        <!-- 1. National overview -->
+        <h2>National overview</h2>
+        <section class="section grid-layout">
+            <div class="text">
+                <h3>Smoking share by state (%)</h3>
+                <p>
+                    The data shows that smoking prevalence is not evenly distributed across Australia. Tasmania and the
+                    Northern Territory have notably higher rates, whereas ACT and Victoria sit well below the national
+                    mean. These gaps highlight the geographic dimension of smoking inequality — a key factor for policy
+                    targeting.
+                </p>
+                <p class="annotation">
+                    The burden isn’t uniform. High-prevalence states are where prevention funding and awareness
+                    campaigns
+                    could yield the greatest marginal impact.
+                </p>
+                <p class="small">Source: <code>Australian Bureau of Statistics</code></p>
+            </div>
+            <div class="visualization large-chart" id="visualization1"></div>
+        </section>
+
+        <!-- 2. Demographic patterns -->
+        <h2>Demographic patterns</h2>
+        <section class="section grid-layout">
+            <div class="visualization" id="visualization2"></div>
+            <div class="text">
+                <h3>Smoking trend by gender</h3>
+                <p>
+                    While men continue to smoke more than women, the gap between genders has gradually narrowed — a sign
+                    that anti-smoking efforts are resonating across the population. This convergence suggests social
+                    change, improved education, and equal access to cessation support.
+                </p>
+                <p class="annotation">
+                    The gender gap in smoking is closing, reflecting a broader cultural shift in health attitudes.
+                </p>
+                <p class="small">Source: <code>Australian Bureau of Statistics</code></p>
+            </div>
+        </section>
+
+        <!-- 3. Age groups -->
+        <section class="section grid-layout">
+            <div class="text">
+                <h3>Smokers by age group</h3>
+                <p>
+                    The grouped bar chart compares smoking levels across age groups and survey years. It reveals that
+                    younger Australians (particularly those aged 15–24) have experienced the steepest decline in
+                    smoking.
+                </p>
+                <p class="annotation">
+                    The data indicates a generational transition: new cohorts are entering adulthood with lower smoking
+                    rates than ever before. Meanwhile, older groups (45+) show slower declines, implying entrenched
+                    habits.
+                </p>
+                <p class="small">Source: <code>Australian Bureau of Statistics</code></p>
+            </div>
+            <div class="visualization large-chart" id="visualization3"></div>
+        </section>
+
+        <!-- 4. Origin and community -->
+        <h2>Origin and community</h2>
+        <section class="section grid-layout">
+            <div class="visualization" id="visualization4"></div>
+            <div class="text">
+                <h3>Smokers in Australia by country of origin</h3>
+                <p>
+                    This donut chart visualises the share of smokers by country of origin. Australian-born residents
+                    represent the largest group, but migrant communities show varied smoking rates, reflecting different
+                    cultural and socioeconomic influences.
+                </p>
+                <p class="annotation">
+                    Some overseas-born groups have higher or lower smoking rates depending on their country of origin
+                    and
+                    access to public health messaging. These variations underscore the importance of culturally specific
+                    tobacco control measures
+                </p>
+                <p class="small">Source: <code>data/SMOKER_BY_ETHNICITY.csv</code></p>
+            </div>
+        </section>
+
+        <!-- 5. Global context -->
+        <h2>Global context</h2>
+        <section class="section grid-layout">
+            <div class="text">
+                <h3>Global smoking prevalence (2025)</h3>
+                <p>
+                    Australia ranks among the lowest in global smoking prevalence, aligning with countries like Canada
+                    and Norway. In contrast, many regions in Eastern Europe and Southeast Asia maintain significantly
+                    higher smoking rates.
+                </p>
+                <p class="annotation">
+                    Australia’s sustained policy and education efforts place it as a global leader in tobacco control —
+                    though continued vigilance is necessary to maintain progress.
+
+                </p>
+                <p class="small">Sources:
+                    <code>https://worldpopulationreview.com/country-rankings/smoking-rates-by-country</code>
+                </p>
+            </div>
+            <div class="visualization large-chart" id="visualization5"></div>
+        </section>
+
+        <footer>
+            Smoking in Transition: Australia’s Changing Relationship with Tobacco • Author: <strong>Ansh
+                Saravat</strong> • Updated: <span id="updated"></span> •
+            Data: Australian Bureau of Statistics, World Population Review, Natural Earth (basemap) •
+            Tools: Vega-Lite v5, Vega v5, vega-embed v6 • Projection: Equal Earth •
+            Licences: AIHW/ABS/OWID — CC BY 4.0; Natural Earth — Public Domain</a>
+        </footer>
+        <script>
+            document.getElementById('updated').textContent =
+                new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+        </script>
+
+    </div>
+
+    <script>
+        const embedOptions = { actions: false, config: { background: null } };
+        vegaEmbed('#visualization1', 'JS/visualization.vg(1).json', embedOptions);
+        vegaEmbed('#visualization2', 'JS/visualization.vg(2).json', embedOptions);
+        vegaEmbed('#visualization3', 'JS/visualization.vg(3).json', embedOptions);
+        vegaEmbed('#visualization4', 'JS/visualization.vg(4).json', embedOptions);
+        vegaEmbed('#visualization5', 'JS/visualization.vg(5).json', embedOptions);
+    </script>
+</body>
+
+</html>
