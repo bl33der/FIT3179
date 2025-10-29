@@ -1,0 +1,348 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "background": "white",
+  "padding": 5,
+  "width": 500,
+  "height": 440,
+  "title": {
+    "anchor": "start",
+    "text": "Smokers in Australia by Country of Origin"
+  },
+  "style": "view",
+  "data": [
+    {"name": "hover_store"},
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/bl33der/FIT3179/main/data/SMOKER_BY_ETHNICITY.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {"type": "filter", "expr": "datum.Country && datum.Country != ''"},
+        {"type": "formula", "expr": "toNumber(datum.Smokers)", "as": "Smk"},
+        {"type": "filter", "expr": "isValid(datum.Smk) && datum.Smk > 0"},
+        {
+          "type": "joinaggregate",
+          "as": ["Total"],
+          "ops": ["sum"],
+          "fields": ["Smk"]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Smk / datum.Total * 100",
+          "as": "Pct"
+        },
+        {"type": "formula", "expr": "datum.Pct >= 5 ? 0 : 1", "as": "isTiny"},
+        {
+          "type": "formula",
+          "expr": "datum.Country + ' — ' + format(datum.Smk, ',.0f') + ' (' + format(datum.Pct, '.1f') + '%)'",
+          "as": "LongLabel"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "stack",
+          "groupby": [],
+          "field": "Smk",
+          "sort": {"field": ["Smk"], "order": ["descending"]},
+          "as": ["Smk_start", "Smk_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Smk\"]) && isFinite(+datum[\"Smk\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.isTiny == 0 && datum.Country != 'Australia' && datum.Country != 'Other'"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Smk\"]) && isFinite(+datum[\"Smk\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.isTiny == 1 && hover.Country == datum.Country"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Smk\"]) && isFinite(+datum[\"Smk\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_3",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [],
+          "ops": ["sum", "count"],
+          "fields": ["Smk", null],
+          "as": ["TotalSmk", "N"]
+        }
+      ]
+    },
+    {
+      "name": "data_4",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "length(data(\"hover_store\")) && vlSelectionTest(\"hover_store\", datum)"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "pointermove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "hover",
+      "update": "vlSelectionResolve(\"hover_store\", \"union\", true, true)"
+    },
+    {
+      "name": "hover_tuple",
+      "on": [
+        {
+          "events": [{"source": "scope", "type": "pointerover"}],
+          "update": "datum && item().mark.marktype !== 'group' && indexof(item().mark.role, 'legend') < 0 ? {unit: \"layer_0\", fields: hover_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"Country\"]]} : null",
+          "force": true
+        },
+        {"events": [{"source": "view", "type": "pointerout"}], "update": "null"}
+      ]
+    },
+    {
+      "name": "hover_tuple_fields",
+      "value": [{"type": "E", "field": "Country"}]
+    },
+    {
+      "name": "hover_toggle",
+      "value": false,
+      "on": [
+        {
+          "events": [{"source": "scope", "type": "pointerover"}],
+          "update": "event.shiftKey"
+        },
+        {
+          "events": [{"source": "view", "type": "pointerout"}],
+          "update": "false"
+        }
+      ]
+    },
+    {
+      "name": "hover_modify",
+      "on": [
+        {
+          "events": {"signal": "hover_tuple"},
+          "update": "modify(\"hover_store\", hover_toggle ? null : hover_tuple, hover_toggle ? null : true, hover_toggle ? hover_tuple : null)"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "arc",
+      "style": ["arc"],
+      "interactive": true,
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "#fff"},
+          "padAngle": {"value": 0.01},
+          "innerRadius": {"value": 100},
+          "outerRadius": {"value": 170},
+          "cornerRadius": {"value": 3},
+          "fill": {"scale": "color", "field": "Country"},
+          "opacity": [
+            {
+              "test": "length(data(\"hover_store\")) && vlSelectionTest(\"hover_store\", datum)",
+              "value": 1
+            },
+            {"value": 0.45}
+          ],
+          "tooltip": {
+            "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Smokers('000)\": format(datum[\"Smk\"], \",.1f\"), \"Share (%)\": format(datum[\"Pct\"], \".1f\")}"
+          },
+          "description": {
+            "signal": "\"Smk: \" + (format(datum[\"Smk\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Smokers('000): \" + (format(datum[\"Smk\"], \",.1f\")) + \"; Share (%): \" + (format(datum[\"Pct\"], \".1f\"))"
+          },
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "startAngle": {"scale": "theta", "field": "Smk_end"},
+          "endAngle": {"scale": "theta", "field": "Smk_start"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 12},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#111827"},
+          "description": {
+            "signal": "\"Smk: \" + (format(datum[\"Smk\"], \"\")) + \"; LongLabel: \" + (isValid(datum[\"LongLabel\"]) ? datum[\"LongLabel\"] : \"\"+datum[\"LongLabel\"])"
+          },
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "text": {
+            "signal": "isValid(datum[\"LongLabel\"]) ? datum[\"LongLabel\"] : \"\"+datum[\"LongLabel\"]"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "radius": {"value": 195},
+          "theta": {"scale": "theta", "field": "Smk"}
+        }
+      }
+    },
+    {
+      "name": "layer_2_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_2"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 12},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#111827"},
+          "description": {
+            "signal": "\"Smk: \" + (format(datum[\"Smk\"], \"\")) + \"; LongLabel: \" + (isValid(datum[\"LongLabel\"]) ? datum[\"LongLabel\"] : \"\"+datum[\"LongLabel\"])"
+          },
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "text": {
+            "signal": "isValid(datum[\"LongLabel\"]) ? datum[\"LongLabel\"] : \"\"+datum[\"LongLabel\"]"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "radius": {"value": 130},
+          "theta": {"scale": "theta", "field": "Smk"}
+        }
+      }
+    },
+    {
+      "name": "layer_3_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_3"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 12},
+          "fontWeight": {"value": "bold"},
+          "lineHeight": {"value": 16},
+          "fill": {"value": "#111827"},
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"}
+        }
+      }
+    },
+    {
+      "name": "layer_4_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_4"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 13},
+          "fontWeight": {"value": "bold"},
+          "lineHeight": {"value": 18},
+          "fill": {"value": "#111827"},
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "theta",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Smk_start"},
+          {"data": "data_0", "field": "Smk_end"},
+          {"data": "data_1", "field": "Smk"},
+          {"data": "data_2", "field": "Smk"}
+        ]
+      },
+      "range": [0, 6.283185307179586],
+      "reverse": true,
+      "zero": true
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "data_0", "field": "Country", "sort": true},
+      "range": {"scheme": "tableau10"}
+    }
+  ],
+  "legends": [
+    {
+      "labelFontSize": 12,
+      "orient": "right",
+      "symbolSize": 100,
+      "fill": "color",
+      "symbolType": "circle",
+      "encode": {
+        "symbols": {
+          "update": {"stroke": {"value": "#fff"}, "opacity": {"value": 1}}
+        }
+      }
+    }
+  ],
+  "config": {
+    "legend": {"labelFontSize": 12},
+    "style": {
+      "guide-label": {
+        "font": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+      },
+      "guide-title": {
+        "font": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+      },
+      "group-title": {
+        "font": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial",
+        "fontSize": 20
+      },
+      "group-subtitle": {
+        "font": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+      },
+      "cell": {"stroke": null},
+      "text": {
+        "font": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+      }
+    },
+    "title": {"subtitleFontSize": 12}
+  }
+}
