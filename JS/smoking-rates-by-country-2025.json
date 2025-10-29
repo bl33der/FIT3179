@@ -1,0 +1,1164 @@
+[
+  {
+    "flagCode": "NR",
+    "country": "Nauru",
+    "TotalSmokersAsPctOfPop_2025": 46.7,
+    "MaleSmokersAsPctOfPop_2025": 47.8,
+    "FemaleSmokersAsPctOfPop_2025": 45.6
+  },
+  {
+    "flagCode": "MM",
+    "country": "Myanmar",
+    "TotalSmokersAsPctOfPop_2025": 42.3,
+    "MaleSmokersAsPctOfPop_2025": 68,
+    "FemaleSmokersAsPctOfPop_2025": 16.6
+  },
+  {
+    "flagCode": "RS",
+    "country": "Serbia",
+    "TotalSmokersAsPctOfPop_2025": 39,
+    "MaleSmokersAsPctOfPop_2025": 38.9,
+    "FemaleSmokersAsPctOfPop_2025": 39.2
+  },
+  {
+    "flagCode": "BG",
+    "country": "Bulgaria",
+    "TotalSmokersAsPctOfPop_2025": 38.8,
+    "MaleSmokersAsPctOfPop_2025": 38.5,
+    "FemaleSmokersAsPctOfPop_2025": 39.2
+  },
+  {
+    "flagCode": "ID",
+    "country": "Indonesia",
+    "TotalSmokersAsPctOfPop_2025": 38.7,
+    "MaleSmokersAsPctOfPop_2025": 74.5,
+    "FemaleSmokersAsPctOfPop_2025": 3
+  },
+  {
+    "flagCode": "PG",
+    "country": "Papua New Guinea",
+    "TotalSmokersAsPctOfPop_2025": 38.1,
+    "MaleSmokersAsPctOfPop_2025": 52.4,
+    "FemaleSmokersAsPctOfPop_2025": 23.8
+  },
+  {
+    "flagCode": "HR",
+    "country": "Croatia",
+    "TotalSmokersAsPctOfPop_2025": 37.6,
+    "MaleSmokersAsPctOfPop_2025": 36.3,
+    "FemaleSmokersAsPctOfPop_2025": 38.9
+  },
+  {
+    "flagCode": "TL",
+    "country": "Timor-Leste",
+    "TotalSmokersAsPctOfPop_2025": 37.2,
+    "MaleSmokersAsPctOfPop_2025": 64.8,
+    "FemaleSmokersAsPctOfPop_2025": 9.5
+  },
+  {
+    "flagCode": "KI",
+    "country": "Kiribati",
+    "TotalSmokersAsPctOfPop_2025": 36.8,
+    "MaleSmokersAsPctOfPop_2025": 49.2,
+    "FemaleSmokersAsPctOfPop_2025": 24.5
+  },
+  {
+    "flagCode": "AD",
+    "country": "Andorra",
+    "TotalSmokersAsPctOfPop_2025": 36.4,
+    "MaleSmokersAsPctOfPop_2025": 33.5,
+    "FemaleSmokersAsPctOfPop_2025": 39.3
+  },
+  {
+    "flagCode": "JO",
+    "country": "Jordan",
+    "TotalSmokersAsPctOfPop_2025": 36.3,
+    "MaleSmokersAsPctOfPop_2025": 58.4,
+    "FemaleSmokersAsPctOfPop_2025": 14.1
+  },
+  {
+    "flagCode": "SB",
+    "country": "Solomon Islands",
+    "TotalSmokersAsPctOfPop_2025": 36.1,
+    "MaleSmokersAsPctOfPop_2025": 53.6,
+    "FemaleSmokersAsPctOfPop_2025": 18.6
+  },
+  {
+    "flagCode": "BA",
+    "country": "Bosnia and Herzegovina",
+    "TotalSmokersAsPctOfPop_2025": 35.2,
+    "MaleSmokersAsPctOfPop_2025": 39.9,
+    "FemaleSmokersAsPctOfPop_2025": 30.5
+  },
+  {
+    "flagCode": "CY",
+    "country": "Cyprus",
+    "TotalSmokersAsPctOfPop_2025": 35,
+    "MaleSmokersAsPctOfPop_2025": 45.6,
+    "FemaleSmokersAsPctOfPop_2025": 24.4
+  },
+  {
+    "flagCode": "FR",
+    "country": "France",
+    "TotalSmokersAsPctOfPop_2025": 34.6,
+    "MaleSmokersAsPctOfPop_2025": 35.2,
+    "FemaleSmokersAsPctOfPop_2025": 34
+  },
+  {
+    "flagCode": "LB",
+    "country": "Lebanon",
+    "TotalSmokersAsPctOfPop_2025": 34.1,
+    "MaleSmokersAsPctOfPop_2025": 43.3,
+    "FemaleSmokersAsPctOfPop_2025": 25
+  },
+  {
+    "flagCode": "SK",
+    "country": "Slovakia",
+    "TotalSmokersAsPctOfPop_2025": 32.8,
+    "MaleSmokersAsPctOfPop_2025": 35.7,
+    "FemaleSmokersAsPctOfPop_2025": 29.8
+  },
+  {
+    "flagCode": "LV",
+    "country": "Latvia",
+    "TotalSmokersAsPctOfPop_2025": 32.6,
+    "MaleSmokersAsPctOfPop_2025": 44.8,
+    "FemaleSmokersAsPctOfPop_2025": 20.3
+  },
+  {
+    "flagCode": "TV",
+    "country": "Tuvalu",
+    "TotalSmokersAsPctOfPop_2025": 32.2,
+    "MaleSmokersAsPctOfPop_2025": 46.1,
+    "FemaleSmokersAsPctOfPop_2025": 18.3
+  },
+  {
+    "flagCode": "GE",
+    "country": "Georgia",
+    "TotalSmokersAsPctOfPop_2025": 31.6,
+    "MaleSmokersAsPctOfPop_2025": 55.2,
+    "FemaleSmokersAsPctOfPop_2025": 8.1
+  },
+  {
+    "flagCode": "HU",
+    "country": "Hungary",
+    "TotalSmokersAsPctOfPop_2025": 31.5,
+    "MaleSmokersAsPctOfPop_2025": 35.5,
+    "FemaleSmokersAsPctOfPop_2025": 27.5
+  },
+  {
+    "flagCode": "ME",
+    "country": "Montenegro",
+    "TotalSmokersAsPctOfPop_2025": 31.5,
+    "MaleSmokersAsPctOfPop_2025": 29.9,
+    "FemaleSmokersAsPctOfPop_2025": 33.1
+  },
+  {
+    "flagCode": "TO",
+    "country": "Tonga",
+    "TotalSmokersAsPctOfPop_2025": 31.1,
+    "MaleSmokersAsPctOfPop_2025": 46.4,
+    "FemaleSmokersAsPctOfPop_2025": 15.9
+  },
+  {
+    "flagCode": "BD",
+    "country": "Bangladesh",
+    "TotalSmokersAsPctOfPop_2025": 30.8,
+    "MaleSmokersAsPctOfPop_2025": 48.6,
+    "FemaleSmokersAsPctOfPop_2025": 13.1
+  },
+  {
+    "flagCode": "GR",
+    "country": "Greece",
+    "TotalSmokersAsPctOfPop_2025": 30.6,
+    "MaleSmokersAsPctOfPop_2025": 32.2,
+    "FemaleSmokersAsPctOfPop_2025": 29
+  },
+  {
+    "flagCode": "MD",
+    "country": "Moldova",
+    "TotalSmokersAsPctOfPop_2025": 30.5,
+    "MaleSmokersAsPctOfPop_2025": 53.9,
+    "FemaleSmokersAsPctOfPop_2025": 7.2
+  },
+  {
+    "flagCode": "MH",
+    "country": "Marshall Islands",
+    "TotalSmokersAsPctOfPop_2025": 30.4,
+    "MaleSmokersAsPctOfPop_2025": 52.4,
+    "FemaleSmokersAsPctOfPop_2025": 8.4
+  },
+  {
+    "flagCode": "TR",
+    "country": "Turkey",
+    "TotalSmokersAsPctOfPop_2025": 30.2,
+    "MaleSmokersAsPctOfPop_2025": 39.7,
+    "FemaleSmokersAsPctOfPop_2025": 20.6
+  },
+  {
+    "flagCode": "LT",
+    "country": "Lithuania",
+    "TotalSmokersAsPctOfPop_2025": 30.2,
+    "MaleSmokersAsPctOfPop_2025": 39.2,
+    "FemaleSmokersAsPctOfPop_2025": 21.1
+  },
+  {
+    "flagCode": "CZ",
+    "country": "Czechia",
+    "TotalSmokersAsPctOfPop_2025": 29.4,
+    "MaleSmokersAsPctOfPop_2025": 32.5,
+    "FemaleSmokersAsPctOfPop_2025": 26.4
+  },
+  {
+    "flagCode": "RO",
+    "country": "Romania",
+    "TotalSmokersAsPctOfPop_2025": 29.3,
+    "MaleSmokersAsPctOfPop_2025": 37.6,
+    "FemaleSmokersAsPctOfPop_2025": 21
+  },
+  {
+    "flagCode": "MN",
+    "country": "Mongolia",
+    "TotalSmokersAsPctOfPop_2025": 29.2,
+    "MaleSmokersAsPctOfPop_2025": 51.3,
+    "FemaleSmokersAsPctOfPop_2025": 7.1
+  },
+  {
+    "flagCode": "RU",
+    "country": "Russia",
+    "TotalSmokersAsPctOfPop_2025": 28.9,
+    "MaleSmokersAsPctOfPop_2025": 39.6,
+    "FemaleSmokersAsPctOfPop_2025": 18.2
+  },
+  {
+    "flagCode": "BY",
+    "country": "Belarus",
+    "TotalSmokersAsPctOfPop_2025": 28.9,
+    "MaleSmokersAsPctOfPop_2025": 44,
+    "FemaleSmokersAsPctOfPop_2025": 13.8
+  },
+  {
+    "flagCode": "ES",
+    "country": "Spain",
+    "TotalSmokersAsPctOfPop_2025": 27.8,
+    "MaleSmokersAsPctOfPop_2025": 28,
+    "FemaleSmokersAsPctOfPop_2025": 27.5
+  },
+  {
+    "flagCode": "CL",
+    "country": "Chile",
+    "TotalSmokersAsPctOfPop_2025": 27,
+    "MaleSmokersAsPctOfPop_2025": 28.8,
+    "FemaleSmokersAsPctOfPop_2025": 25.2
+  },
+  {
+    "flagCode": "FJ",
+    "country": "Fiji",
+    "TotalSmokersAsPctOfPop_2025": 27,
+    "MaleSmokersAsPctOfPop_2025": 41.1,
+    "FemaleSmokersAsPctOfPop_2025": 13
+  },
+  {
+    "flagCode": "KG",
+    "country": "Kyrgyzstan",
+    "TotalSmokersAsPctOfPop_2025": 26.9,
+    "MaleSmokersAsPctOfPop_2025": 50.7,
+    "FemaleSmokersAsPctOfPop_2025": 3.1
+  },
+  {
+    "flagCode": "EE",
+    "country": "Estonia",
+    "TotalSmokersAsPctOfPop_2025": 26.4,
+    "MaleSmokersAsPctOfPop_2025": 30.8,
+    "FemaleSmokersAsPctOfPop_2025": 22
+  },
+  {
+    "flagCode": "BE",
+    "country": "Belgium",
+    "TotalSmokersAsPctOfPop_2025": 26.3,
+    "MaleSmokersAsPctOfPop_2025": 28.1,
+    "FemaleSmokersAsPctOfPop_2025": 24.5
+  },
+  {
+    "flagCode": "EG",
+    "country": "Egypt",
+    "TotalSmokersAsPctOfPop_2025": 25.8,
+    "MaleSmokersAsPctOfPop_2025": 51.2,
+    "FemaleSmokersAsPctOfPop_2025": 0.3
+  },
+  {
+    "flagCode": "PT",
+    "country": "Portugal",
+    "TotalSmokersAsPctOfPop_2025": 25.8,
+    "MaleSmokersAsPctOfPop_2025": 29.7,
+    "FemaleSmokersAsPctOfPop_2025": 21.8
+  },
+  {
+    "flagCode": "CK",
+    "country": "Cook Islands",
+    "TotalSmokersAsPctOfPop_2025": 25.8,
+    "MaleSmokersAsPctOfPop_2025": 30.4,
+    "FemaleSmokersAsPctOfPop_2025": 21.1
+  },
+  {
+    "flagCode": "NP",
+    "country": "Nepal",
+    "TotalSmokersAsPctOfPop_2025": 25.7,
+    "MaleSmokersAsPctOfPop_2025": 42.7,
+    "FemaleSmokersAsPctOfPop_2025": 8.6
+  },
+  {
+    "flagCode": "CH",
+    "country": "Switzerland",
+    "TotalSmokersAsPctOfPop_2025": 25.3,
+    "MaleSmokersAsPctOfPop_2025": 27.7,
+    "FemaleSmokersAsPctOfPop_2025": 23
+  },
+  {
+    "flagCode": "MG",
+    "country": "Madagascar",
+    "TotalSmokersAsPctOfPop_2025": 25.1,
+    "MaleSmokersAsPctOfPop_2025": 41.3,
+    "FemaleSmokersAsPctOfPop_2025": 8.8
+  },
+  {
+    "flagCode": "LA",
+    "country": "Laos",
+    "TotalSmokersAsPctOfPop_2025": 25.1,
+    "MaleSmokersAsPctOfPop_2025": 42.7,
+    "FemaleSmokersAsPctOfPop_2025": 7.6
+  },
+  {
+    "flagCode": "MV",
+    "country": "Maldives",
+    "TotalSmokersAsPctOfPop_2025": 24.9,
+    "MaleSmokersAsPctOfPop_2025": 40.6,
+    "FemaleSmokersAsPctOfPop_2025": 9.2
+  },
+  {
+    "flagCode": "AM",
+    "country": "Armenia",
+    "TotalSmokersAsPctOfPop_2025": 24.1,
+    "MaleSmokersAsPctOfPop_2025": 46.8,
+    "FemaleSmokersAsPctOfPop_2025": 1.4
+  },
+  {
+    "flagCode": "LS",
+    "country": "Lesotho",
+    "TotalSmokersAsPctOfPop_2025": 24.1,
+    "MaleSmokersAsPctOfPop_2025": 43.8,
+    "FemaleSmokersAsPctOfPop_2025": 4.4
+  },
+  {
+    "flagCode": "MT",
+    "country": "Malta",
+    "TotalSmokersAsPctOfPop_2025": 23.9,
+    "MaleSmokersAsPctOfPop_2025": 24.8,
+    "FemaleSmokersAsPctOfPop_2025": 23
+  },
+  {
+    "flagCode": "US",
+    "country": "United States",
+    "TotalSmokersAsPctOfPop_2025": 23.6,
+    "MaleSmokersAsPctOfPop_2025": 29.2,
+    "FemaleSmokersAsPctOfPop_2025": 17.9
+  },
+  {
+    "flagCode": "UA",
+    "country": "Ukraine",
+    "TotalSmokersAsPctOfPop_2025": 23.6,
+    "MaleSmokersAsPctOfPop_2025": 36,
+    "FemaleSmokersAsPctOfPop_2025": 11.1
+  },
+  {
+    "flagCode": "CN",
+    "country": "China",
+    "TotalSmokersAsPctOfPop_2025": 22.9,
+    "MaleSmokersAsPctOfPop_2025": 44.4,
+    "FemaleSmokersAsPctOfPop_2025": 1.4
+  },
+  {
+    "flagCode": "AR",
+    "country": "Argentina",
+    "TotalSmokersAsPctOfPop_2025": 22.6,
+    "MaleSmokersAsPctOfPop_2025": 27.2,
+    "FemaleSmokersAsPctOfPop_2025": 18.1
+  },
+  {
+    "flagCode": "AT",
+    "country": "Austria",
+    "TotalSmokersAsPctOfPop_2025": 22.5,
+    "MaleSmokersAsPctOfPop_2025": 23.2,
+    "FemaleSmokersAsPctOfPop_2025": 21.8
+  },
+  {
+    "flagCode": "LU",
+    "country": "Luxembourg",
+    "TotalSmokersAsPctOfPop_2025": 22.3,
+    "MaleSmokersAsPctOfPop_2025": 23.3,
+    "FemaleSmokersAsPctOfPop_2025": 21.2
+  },
+  {
+    "flagCode": "IT",
+    "country": "Italy",
+    "TotalSmokersAsPctOfPop_2025": 22.1,
+    "MaleSmokersAsPctOfPop_2025": 25,
+    "FemaleSmokersAsPctOfPop_2025": 19.1
+  },
+  {
+    "flagCode": "PL",
+    "country": "Poland",
+    "TotalSmokersAsPctOfPop_2025": 22.1,
+    "MaleSmokersAsPctOfPop_2025": 25.2,
+    "FemaleSmokersAsPctOfPop_2025": 18.9
+  },
+  {
+    "flagCode": "IN",
+    "country": "India",
+    "TotalSmokersAsPctOfPop_2025": 21.8,
+    "MaleSmokersAsPctOfPop_2025": 34.6,
+    "FemaleSmokersAsPctOfPop_2025": 9
+  },
+  {
+    "flagCode": "VN",
+    "country": "Vietnam",
+    "TotalSmokersAsPctOfPop_2025": 21.7,
+    "MaleSmokersAsPctOfPop_2025": 41.7,
+    "FemaleSmokersAsPctOfPop_2025": 1.8
+  },
+  {
+    "flagCode": "AF",
+    "country": "Afghanistan",
+    "TotalSmokersAsPctOfPop_2025": 21.3,
+    "MaleSmokersAsPctOfPop_2025": 36.8,
+    "FemaleSmokersAsPctOfPop_2025": 5.9
+  },
+  {
+    "flagCode": "DZ",
+    "country": "Algeria",
+    "TotalSmokersAsPctOfPop_2025": 21.1,
+    "MaleSmokersAsPctOfPop_2025": 41.6,
+    "FemaleSmokersAsPctOfPop_2025": 0.6
+  },
+  {
+    "flagCode": "MY",
+    "country": "Malaysia",
+    "TotalSmokersAsPctOfPop_2025": 21,
+    "MaleSmokersAsPctOfPop_2025": 41.4,
+    "FemaleSmokersAsPctOfPop_2025": 0.6
+  },
+  {
+    "flagCode": "KZ",
+    "country": "Kazakhstan",
+    "TotalSmokersAsPctOfPop_2025": 20.9,
+    "MaleSmokersAsPctOfPop_2025": 35.3,
+    "FemaleSmokersAsPctOfPop_2025": 6.5
+  },
+  {
+    "flagCode": "WS",
+    "country": "Samoa",
+    "TotalSmokersAsPctOfPop_2025": 20.8,
+    "MaleSmokersAsPctOfPop_2025": 29.2,
+    "FemaleSmokersAsPctOfPop_2025": 12.5
+  },
+  {
+    "flagCode": "FI",
+    "country": "Finland",
+    "TotalSmokersAsPctOfPop_2025": 20.7,
+    "MaleSmokersAsPctOfPop_2025": 23.9,
+    "FemaleSmokersAsPctOfPop_2025": 17.4
+  },
+  {
+    "flagCode": "AL",
+    "country": "Albania",
+    "TotalSmokersAsPctOfPop_2025": 20.7,
+    "MaleSmokersAsPctOfPop_2025": 35.9,
+    "FemaleSmokersAsPctOfPop_2025": 5.6
+  },
+  {
+    "flagCode": "YE",
+    "country": "Yemen",
+    "TotalSmokersAsPctOfPop_2025": 20.6,
+    "MaleSmokersAsPctOfPop_2025": 33.8,
+    "FemaleSmokersAsPctOfPop_2025": 7.5
+  },
+  {
+    "flagCode": "ZA",
+    "country": "South Africa",
+    "TotalSmokersAsPctOfPop_2025": 20.5,
+    "MaleSmokersAsPctOfPop_2025": 35,
+    "FemaleSmokersAsPctOfPop_2025": 6
+  },
+  {
+    "flagCode": "SE",
+    "country": "Sweden",
+    "TotalSmokersAsPctOfPop_2025": 20.5,
+    "MaleSmokersAsPctOfPop_2025": 26.6,
+    "FemaleSmokersAsPctOfPop_2025": 14.5
+  },
+  {
+    "flagCode": "MU",
+    "country": "Mauritius",
+    "TotalSmokersAsPctOfPop_2025": 20.5,
+    "MaleSmokersAsPctOfPop_2025": 38.3,
+    "FemaleSmokersAsPctOfPop_2025": 2.8
+  },
+  {
+    "flagCode": "KW",
+    "country": "Kuwait",
+    "TotalSmokersAsPctOfPop_2025": 20,
+    "MaleSmokersAsPctOfPop_2025": 38.1,
+    "FemaleSmokersAsPctOfPop_2025": 1.9
+  },
+  {
+    "flagCode": "NL",
+    "country": "Netherlands",
+    "TotalSmokersAsPctOfPop_2025": 19.9,
+    "MaleSmokersAsPctOfPop_2025": 22,
+    "FemaleSmokersAsPctOfPop_2025": 17.8
+  },
+  {
+    "flagCode": "DE",
+    "country": "Germany",
+    "TotalSmokersAsPctOfPop_2025": 19.7,
+    "MaleSmokersAsPctOfPop_2025": 21.4,
+    "FemaleSmokersAsPctOfPop_2025": 18
+  },
+  {
+    "flagCode": "SC",
+    "country": "Seychelles",
+    "TotalSmokersAsPctOfPop_2025": 19.7,
+    "MaleSmokersAsPctOfPop_2025": 34.1,
+    "FemaleSmokersAsPctOfPop_2025": 5.3
+  },
+  {
+    "flagCode": "TN",
+    "country": "Tunisia",
+    "TotalSmokersAsPctOfPop_2025": 19.5,
+    "MaleSmokersAsPctOfPop_2025": 37.6,
+    "FemaleSmokersAsPctOfPop_2025": 1.4
+  },
+  {
+    "flagCode": "SI",
+    "country": "Slovenia",
+    "TotalSmokersAsPctOfPop_2025": 19.5,
+    "MaleSmokersAsPctOfPop_2025": 21.1,
+    "FemaleSmokersAsPctOfPop_2025": 18
+  },
+  {
+    "flagCode": "IQ",
+    "country": "Iraq",
+    "TotalSmokersAsPctOfPop_2025": 19.2,
+    "MaleSmokersAsPctOfPop_2025": 36.9,
+    "FemaleSmokersAsPctOfPop_2025": 14
+  },
+  {
+    "flagCode": "IL",
+    "country": "Israel",
+    "TotalSmokersAsPctOfPop_2025": 19.2,
+    "MaleSmokersAsPctOfPop_2025": 25.5,
+    "FemaleSmokersAsPctOfPop_2025": 12.9
+  },
+  {
+    "flagCode": "PH",
+    "country": "Philippines",
+    "TotalSmokersAsPctOfPop_2025": 19.1,
+    "MaleSmokersAsPctOfPop_2025": 34.3,
+    "FemaleSmokersAsPctOfPop_2025": 3.8
+  },
+  {
+    "flagCode": "UY",
+    "country": "Uruguay",
+    "TotalSmokersAsPctOfPop_2025": 19.1,
+    "MaleSmokersAsPctOfPop_2025": 21.8,
+    "FemaleSmokersAsPctOfPop_2025": 16.4
+  },
+  {
+    "flagCode": "AZ",
+    "country": "Azerbaijan",
+    "TotalSmokersAsPctOfPop_2025": 18.7,
+    "MaleSmokersAsPctOfPop_2025": 37.3,
+    "FemaleSmokersAsPctOfPop_2025": 0.1
+  },
+  {
+    "flagCode": "KR",
+    "country": "South Korea",
+    "TotalSmokersAsPctOfPop_2025": 18.5,
+    "MaleSmokersAsPctOfPop_2025": 31.4,
+    "FemaleSmokersAsPctOfPop_2025": 5.7
+  },
+  {
+    "flagCode": "LK",
+    "country": "Sri Lanka",
+    "TotalSmokersAsPctOfPop_2025": 18.5,
+    "MaleSmokersAsPctOfPop_2025": 35.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.8
+  },
+  {
+    "flagCode": "TH",
+    "country": "Thailand",
+    "TotalSmokersAsPctOfPop_2025": 18.3,
+    "MaleSmokersAsPctOfPop_2025": 35.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.3
+  },
+  {
+    "flagCode": "JP",
+    "country": "Japan",
+    "TotalSmokersAsPctOfPop_2025": 17.8,
+    "MaleSmokersAsPctOfPop_2025": 26.5,
+    "FemaleSmokersAsPctOfPop_2025": 9.1
+  },
+  {
+    "flagCode": "IE",
+    "country": "Ireland",
+    "TotalSmokersAsPctOfPop_2025": 17.8,
+    "MaleSmokersAsPctOfPop_2025": 20.3,
+    "FemaleSmokersAsPctOfPop_2025": 15.4
+  },
+  {
+    "flagCode": "BW",
+    "country": "Botswana",
+    "TotalSmokersAsPctOfPop_2025": 17.6,
+    "MaleSmokersAsPctOfPop_2025": 29.2,
+    "FemaleSmokersAsPctOfPop_2025": 6
+  },
+  {
+    "flagCode": "BT",
+    "country": "Bhutan",
+    "TotalSmokersAsPctOfPop_2025": 17.6,
+    "MaleSmokersAsPctOfPop_2025": 25.3,
+    "FemaleSmokersAsPctOfPop_2025": 9.9
+  },
+  {
+    "flagCode": "PK",
+    "country": "Pakistan",
+    "TotalSmokersAsPctOfPop_2025": 17.2,
+    "MaleSmokersAsPctOfPop_2025": 28.4,
+    "FemaleSmokersAsPctOfPop_2025": 6
+  },
+  {
+    "flagCode": "PW",
+    "country": "Palau",
+    "TotalSmokersAsPctOfPop_2025": 16.6,
+    "MaleSmokersAsPctOfPop_2025": 26.1,
+    "FemaleSmokersAsPctOfPop_2025": 7.1
+  },
+  {
+    "flagCode": "BN",
+    "country": "Brunei",
+    "TotalSmokersAsPctOfPop_2025": 16.4,
+    "MaleSmokersAsPctOfPop_2025": 30.9,
+    "FemaleSmokersAsPctOfPop_2025": 1.9
+  },
+  {
+    "flagCode": "CG",
+    "country": "Republic of the Congo",
+    "TotalSmokersAsPctOfPop_2025": 16.3,
+    "MaleSmokersAsPctOfPop_2025": 30.7,
+    "FemaleSmokersAsPctOfPop_2025": 1.8
+  },
+  {
+    "flagCode": "SG",
+    "country": "Singapore",
+    "TotalSmokersAsPctOfPop_2025": 16.2,
+    "MaleSmokersAsPctOfPop_2025": 27.6,
+    "FemaleSmokersAsPctOfPop_2025": 4.8
+  },
+  {
+    "flagCode": "UZ",
+    "country": "Uzbekistan",
+    "TotalSmokersAsPctOfPop_2025": 15.8,
+    "MaleSmokersAsPctOfPop_2025": 30.6,
+    "FemaleSmokersAsPctOfPop_2025": 1
+  },
+  {
+    "flagCode": "CU",
+    "country": "Cuba",
+    "TotalSmokersAsPctOfPop_2025": 15.7,
+    "MaleSmokersAsPctOfPop_2025": 23.1,
+    "FemaleSmokersAsPctOfPop_2025": 8.2
+  },
+  {
+    "flagCode": "KM",
+    "country": "Comoros",
+    "TotalSmokersAsPctOfPop_2025": 15.5,
+    "MaleSmokersAsPctOfPop_2025": 26.1,
+    "FemaleSmokersAsPctOfPop_2025": 5
+  },
+  {
+    "flagCode": "KP",
+    "country": "North Korea",
+    "TotalSmokersAsPctOfPop_2025": 15.4,
+    "MaleSmokersAsPctOfPop_2025": 30.7,
+    "FemaleSmokersAsPctOfPop_2025": null
+  },
+  {
+    "flagCode": "KH",
+    "country": "Cambodia",
+    "TotalSmokersAsPctOfPop_2025": 15.3,
+    "MaleSmokersAsPctOfPop_2025": 25.8,
+    "FemaleSmokersAsPctOfPop_2025": 4.8
+  },
+  {
+    "flagCode": "SA",
+    "country": "Saudi Arabia",
+    "TotalSmokersAsPctOfPop_2025": 15,
+    "MaleSmokersAsPctOfPop_2025": 28.1,
+    "FemaleSmokersAsPctOfPop_2025": 2
+  },
+  {
+    "flagCode": "DK",
+    "country": "Denmark",
+    "TotalSmokersAsPctOfPop_2025": 14.4,
+    "MaleSmokersAsPctOfPop_2025": 14.4,
+    "FemaleSmokersAsPctOfPop_2025": 14.5
+  },
+  {
+    "flagCode": "BH",
+    "country": "Bahrain",
+    "TotalSmokersAsPctOfPop_2025": 14.3,
+    "MaleSmokersAsPctOfPop_2025": 23.8,
+    "FemaleSmokersAsPctOfPop_2025": 4.9
+  },
+  {
+    "flagCode": "MX",
+    "country": "Mexico",
+    "TotalSmokersAsPctOfPop_2025": 14.1,
+    "MaleSmokersAsPctOfPop_2025": 21.8,
+    "FemaleSmokersAsPctOfPop_2025": 6.3
+  },
+  {
+    "flagCode": "ZM",
+    "country": "Zambia",
+    "TotalSmokersAsPctOfPop_2025": 14.1,
+    "MaleSmokersAsPctOfPop_2025": 25,
+    "FemaleSmokersAsPctOfPop_2025": 3.1
+  },
+  {
+    "flagCode": "RW",
+    "country": "Rwanda",
+    "TotalSmokersAsPctOfPop_2025": 13.5,
+    "MaleSmokersAsPctOfPop_2025": 20,
+    "FemaleSmokersAsPctOfPop_2025": 7.1
+  },
+  {
+    "flagCode": "LC",
+    "country": "Saint Lucia",
+    "TotalSmokersAsPctOfPop_2025": 13.3,
+    "MaleSmokersAsPctOfPop_2025": 23.9,
+    "FemaleSmokersAsPctOfPop_2025": 2.6
+  },
+  {
+    "flagCode": "NA",
+    "country": "Namibia",
+    "TotalSmokersAsPctOfPop_2025": 13.2,
+    "MaleSmokersAsPctOfPop_2025": 22.1,
+    "FemaleSmokersAsPctOfPop_2025": 4.4
+  },
+  {
+    "flagCode": "BF",
+    "country": "Burkina Faso",
+    "TotalSmokersAsPctOfPop_2025": 13.1,
+    "MaleSmokersAsPctOfPop_2025": 21.1,
+    "FemaleSmokersAsPctOfPop_2025": 5.1
+  },
+  {
+    "flagCode": "IR",
+    "country": "Iran",
+    "TotalSmokersAsPctOfPop_2025": 12.5,
+    "MaleSmokersAsPctOfPop_2025": 22.3,
+    "FemaleSmokersAsPctOfPop_2025": 2.6
+  },
+  {
+    "flagCode": "GB",
+    "country": "United Kingdom",
+    "TotalSmokersAsPctOfPop_2025": 12.5,
+    "MaleSmokersAsPctOfPop_2025": 14.4,
+    "FemaleSmokersAsPctOfPop_2025": 10.7
+  },
+  {
+    "flagCode": "QA",
+    "country": "Qatar",
+    "TotalSmokersAsPctOfPop_2025": 12.5,
+    "MaleSmokersAsPctOfPop_2025": 22.8,
+    "FemaleSmokersAsPctOfPop_2025": 2.2
+  },
+  {
+    "flagCode": "MA",
+    "country": "Morocco",
+    "TotalSmokersAsPctOfPop_2025": 12.2,
+    "MaleSmokersAsPctOfPop_2025": 23.6,
+    "FemaleSmokersAsPctOfPop_2025": 0.9
+  },
+  {
+    "flagCode": "NO",
+    "country": "Norway",
+    "TotalSmokersAsPctOfPop_2025": 12.2,
+    "MaleSmokersAsPctOfPop_2025": 12.8,
+    "FemaleSmokersAsPctOfPop_2025": 11.6
+  },
+  {
+    "flagCode": "AU",
+    "country": "Australia",
+    "TotalSmokersAsPctOfPop_2025": 12,
+    "MaleSmokersAsPctOfPop_2025": 14.1,
+    "FemaleSmokersAsPctOfPop_2025": 9.8
+  },
+  {
+    "flagCode": "HN",
+    "country": "Honduras",
+    "TotalSmokersAsPctOfPop_2025": 11.9,
+    "MaleSmokersAsPctOfPop_2025": 22.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.6
+  },
+  {
+    "flagCode": "GT",
+    "country": "Guatemala",
+    "TotalSmokersAsPctOfPop_2025": 11.8,
+    "MaleSmokersAsPctOfPop_2025": 22,
+    "FemaleSmokersAsPctOfPop_2025": 1.6
+  },
+  {
+    "flagCode": "CD",
+    "country": "DR Congo",
+    "TotalSmokersAsPctOfPop_2025": 11.5,
+    "MaleSmokersAsPctOfPop_2025": 20.5,
+    "FemaleSmokersAsPctOfPop_2025": 2.5
+  },
+  {
+    "flagCode": "BS",
+    "country": "Bahamas",
+    "TotalSmokersAsPctOfPop_2025": 11.3,
+    "MaleSmokersAsPctOfPop_2025": 20.7,
+    "FemaleSmokersAsPctOfPop_2025": 1.9
+  },
+  {
+    "flagCode": "BR",
+    "country": "Brazil",
+    "TotalSmokersAsPctOfPop_2025": 11.1,
+    "MaleSmokersAsPctOfPop_2025": 14.1,
+    "FemaleSmokersAsPctOfPop_2025": 8.1
+  },
+  {
+    "flagCode": "BO",
+    "country": "Bolivia",
+    "TotalSmokersAsPctOfPop_2025": 11.1,
+    "MaleSmokersAsPctOfPop_2025": 19,
+    "FemaleSmokersAsPctOfPop_2025": 3.2
+  },
+  {
+    "flagCode": "SL",
+    "country": "Sierra Leone",
+    "TotalSmokersAsPctOfPop_2025": 11,
+    "MaleSmokersAsPctOfPop_2025": 16.8,
+    "FemaleSmokersAsPctOfPop_2025": 5.2
+  },
+  {
+    "flagCode": "NZ",
+    "country": "New Zealand",
+    "TotalSmokersAsPctOfPop_2025": 10.9,
+    "MaleSmokersAsPctOfPop_2025": 12,
+    "FemaleSmokersAsPctOfPop_2025": 9.7
+  },
+  {
+    "flagCode": "CA",
+    "country": "Canada",
+    "TotalSmokersAsPctOfPop_2025": 10.7,
+    "MaleSmokersAsPctOfPop_2025": 12.9,
+    "FemaleSmokersAsPctOfPop_2025": 8.5
+  },
+  {
+    "flagCode": "ZW",
+    "country": "Zimbabwe",
+    "TotalSmokersAsPctOfPop_2025": 10.4,
+    "MaleSmokersAsPctOfPop_2025": 19.9,
+    "FemaleSmokersAsPctOfPop_2025": 1
+  },
+  {
+    "flagCode": "CV",
+    "country": "Cape Verde",
+    "TotalSmokersAsPctOfPop_2025": 10.2,
+    "MaleSmokersAsPctOfPop_2025": 15.7,
+    "FemaleSmokersAsPctOfPop_2025": 4.6
+  },
+  {
+    "flagCode": "BI",
+    "country": "Burundi",
+    "TotalSmokersAsPctOfPop_2025": 10.1,
+    "MaleSmokersAsPctOfPop_2025": 15.8,
+    "FemaleSmokersAsPctOfPop_2025": 4.5
+  },
+  {
+    "flagCode": "KE",
+    "country": "Kenya",
+    "TotalSmokersAsPctOfPop_2025": 9.9,
+    "MaleSmokersAsPctOfPop_2025": 17.4,
+    "FemaleSmokersAsPctOfPop_2025": 2.4
+  },
+  {
+    "flagCode": "EC",
+    "country": "Ecuador",
+    "TotalSmokersAsPctOfPop_2025": 9.8,
+    "MaleSmokersAsPctOfPop_2025": 17.3,
+    "FemaleSmokersAsPctOfPop_2025": 2.4
+  },
+  {
+    "flagCode": "DO",
+    "country": "Dominican Republic",
+    "TotalSmokersAsPctOfPop_2025": 9.8,
+    "MaleSmokersAsPctOfPop_2025": 13.6,
+    "FemaleSmokersAsPctOfPop_2025": 5.9
+  },
+  {
+    "flagCode": "GY",
+    "country": "Guyana",
+    "TotalSmokersAsPctOfPop_2025": 9.7,
+    "MaleSmokersAsPctOfPop_2025": 17.5,
+    "FemaleSmokersAsPctOfPop_2025": 2
+  },
+  {
+    "flagCode": "GM",
+    "country": "Gambia",
+    "TotalSmokersAsPctOfPop_2025": 9.5,
+    "MaleSmokersAsPctOfPop_2025": 18.4,
+    "FemaleSmokersAsPctOfPop_2025": 0.5
+  },
+  {
+    "flagCode": "PY",
+    "country": "Paraguay",
+    "TotalSmokersAsPctOfPop_2025": 9.4,
+    "MaleSmokersAsPctOfPop_2025": 15.6,
+    "FemaleSmokersAsPctOfPop_2025": 3.3
+  },
+  {
+    "flagCode": "SZ",
+    "country": "Eswatini",
+    "TotalSmokersAsPctOfPop_2025": 9.3,
+    "MaleSmokersAsPctOfPop_2025": 17.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.3
+  },
+  {
+    "flagCode": "JM",
+    "country": "Jamaica",
+    "TotalSmokersAsPctOfPop_2025": 9,
+    "MaleSmokersAsPctOfPop_2025": 15,
+    "FemaleSmokersAsPctOfPop_2025": 3.1
+  },
+  {
+    "flagCode": "MW",
+    "country": "Malawi",
+    "TotalSmokersAsPctOfPop_2025": 8.6,
+    "MaleSmokersAsPctOfPop_2025": 14.7,
+    "FemaleSmokersAsPctOfPop_2025": 2.5
+  },
+  {
+    "flagCode": "OM",
+    "country": "Oman",
+    "TotalSmokersAsPctOfPop_2025": 8.6,
+    "MaleSmokersAsPctOfPop_2025": 16.8,
+    "FemaleSmokersAsPctOfPop_2025": 0.4
+  },
+  {
+    "flagCode": "MR",
+    "country": "Mauritania",
+    "TotalSmokersAsPctOfPop_2025": 8.4,
+    "MaleSmokersAsPctOfPop_2025": 15.2,
+    "FemaleSmokersAsPctOfPop_2025": 1.7
+  },
+  {
+    "flagCode": "SV",
+    "country": "El Salvador",
+    "TotalSmokersAsPctOfPop_2025": 8.3,
+    "MaleSmokersAsPctOfPop_2025": 14.9,
+    "FemaleSmokersAsPctOfPop_2025": 1.7
+  },
+  {
+    "flagCode": "BZ",
+    "country": "Belize",
+    "TotalSmokersAsPctOfPop_2025": 8.3,
+    "MaleSmokersAsPctOfPop_2025": 14.8,
+    "FemaleSmokersAsPctOfPop_2025": 1.8
+  },
+  {
+    "flagCode": "AE",
+    "country": "United Arab Emirates",
+    "TotalSmokersAsPctOfPop_2025": 8.2,
+    "MaleSmokersAsPctOfPop_2025": 13.9,
+    "FemaleSmokersAsPctOfPop_2025": 2.5
+  },
+  {
+    "flagCode": "TZ",
+    "country": "Tanzania",
+    "TotalSmokersAsPctOfPop_2025": 8.1,
+    "MaleSmokersAsPctOfPop_2025": 13.2,
+    "FemaleSmokersAsPctOfPop_2025": 2.9
+  },
+  {
+    "flagCode": "CR",
+    "country": "Costa Rica",
+    "TotalSmokersAsPctOfPop_2025": 8.1,
+    "MaleSmokersAsPctOfPop_2025": 12.1,
+    "FemaleSmokersAsPctOfPop_2025": 4.1
+  },
+  {
+    "flagCode": "ST",
+    "country": "Sao Tome and Principe",
+    "TotalSmokersAsPctOfPop_2025": 8.1,
+    "MaleSmokersAsPctOfPop_2025": 14.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.8
+  },
+  {
+    "flagCode": "CI",
+    "country": "Ivory Coast",
+    "TotalSmokersAsPctOfPop_2025": 8,
+    "MaleSmokersAsPctOfPop_2025": 15.3,
+    "FemaleSmokersAsPctOfPop_2025": 0.7
+  },
+  {
+    "flagCode": "IS",
+    "country": "Iceland",
+    "TotalSmokersAsPctOfPop_2025": 7.9,
+    "MaleSmokersAsPctOfPop_2025": 7.8,
+    "FemaleSmokersAsPctOfPop_2025": 8
+  },
+  {
+    "flagCode": "HT",
+    "country": "Haiti",
+    "TotalSmokersAsPctOfPop_2025": 7.8,
+    "MaleSmokersAsPctOfPop_2025": 13.3,
+    "FemaleSmokersAsPctOfPop_2025": 2.3
+  },
+  {
+    "flagCode": "CO",
+    "country": "Colombia",
+    "TotalSmokersAsPctOfPop_2025": 7.5,
+    "MaleSmokersAsPctOfPop_2025": 11.1,
+    "FemaleSmokersAsPctOfPop_2025": 4
+  },
+  {
+    "flagCode": "NE",
+    "country": "Niger",
+    "TotalSmokersAsPctOfPop_2025": 7.5,
+    "MaleSmokersAsPctOfPop_2025": 13.7,
+    "FemaleSmokersAsPctOfPop_2025": 1.2
+  },
+  {
+    "flagCode": "LR",
+    "country": "Liberia",
+    "TotalSmokersAsPctOfPop_2025": 7.5,
+    "MaleSmokersAsPctOfPop_2025": 13.4,
+    "FemaleSmokersAsPctOfPop_2025": 1.6
+  },
+  {
+    "flagCode": "ML",
+    "country": "Mali",
+    "TotalSmokersAsPctOfPop_2025": 7.3,
+    "MaleSmokersAsPctOfPop_2025": 13.8,
+    "FemaleSmokersAsPctOfPop_2025": 0.7
+  },
+  {
+    "flagCode": "GW",
+    "country": "Guinea-Bissau",
+    "TotalSmokersAsPctOfPop_2025": 7.3,
+    "MaleSmokersAsPctOfPop_2025": 14.1,
+    "FemaleSmokersAsPctOfPop_2025": 0.5
+  },
+  {
+    "flagCode": "TD",
+    "country": "Chad",
+    "TotalSmokersAsPctOfPop_2025": 7,
+    "MaleSmokersAsPctOfPop_2025": 12.6,
+    "FemaleSmokersAsPctOfPop_2025": 1.4
+  },
+  {
+    "flagCode": "BB",
+    "country": "Barbados",
+    "TotalSmokersAsPctOfPop_2025": 6.7,
+    "MaleSmokersAsPctOfPop_2025": 11.9,
+    "FemaleSmokersAsPctOfPop_2025": 1.6
+  },
+  {
+    "flagCode": "UG",
+    "country": "Uganda",
+    "TotalSmokersAsPctOfPop_2025": 6.4,
+    "MaleSmokersAsPctOfPop_2025": 10.3,
+    "FemaleSmokersAsPctOfPop_2025": 2.5
+  },
+  {
+    "flagCode": "PE",
+    "country": "Peru",
+    "TotalSmokersAsPctOfPop_2025": 5.8,
+    "MaleSmokersAsPctOfPop_2025": 9.5,
+    "FemaleSmokersAsPctOfPop_2025": 2.1
+  },
+  {
+    "flagCode": "CM",
+    "country": "Cameroon",
+    "TotalSmokersAsPctOfPop_2025": 5.8,
+    "MaleSmokersAsPctOfPop_2025": 10.5,
+    "FemaleSmokersAsPctOfPop_2025": 1.1
+  },
+  {
+    "flagCode": "SN",
+    "country": "Senegal",
+    "TotalSmokersAsPctOfPop_2025": 5.8,
+    "MaleSmokersAsPctOfPop_2025": 11,
+    "FemaleSmokersAsPctOfPop_2025": 0.6
+  },
+  {
+    "flagCode": "TG",
+    "country": "Togo",
+    "TotalSmokersAsPctOfPop_2025": 5.7,
+    "MaleSmokersAsPctOfPop_2025": 10.6,
+    "FemaleSmokersAsPctOfPop_2025": 0.8
+  },
+  {
+    "flagCode": "BJ",
+    "country": "Benin",
+    "TotalSmokersAsPctOfPop_2025": 5.5,
+    "MaleSmokersAsPctOfPop_2025": 9.3,
+    "FemaleSmokersAsPctOfPop_2025": 1.7
+  },
+  {
+    "flagCode": "ET",
+    "country": "Ethiopia",
+    "TotalSmokersAsPctOfPop_2025": 5.1,
+    "MaleSmokersAsPctOfPop_2025": 8.8,
+    "FemaleSmokersAsPctOfPop_2025": 1.5
+  },
+  {
+    "flagCode": "TM",
+    "country": "Turkmenistan",
+    "TotalSmokersAsPctOfPop_2025": 4.9,
+    "MaleSmokersAsPctOfPop_2025": 9.4,
+    "FemaleSmokersAsPctOfPop_2025": 0.5
+  },
+  {
+    "flagCode": "PA",
+    "country": "Panama",
+    "TotalSmokersAsPctOfPop_2025": 4.5,
+    "MaleSmokersAsPctOfPop_2025": 7.4,
+    "FemaleSmokersAsPctOfPop_2025": 1.7
+  },
+  {
+    "flagCode": "GH",
+    "country": "Ghana",
+    "TotalSmokersAsPctOfPop_2025": 3.1,
+    "MaleSmokersAsPctOfPop_2025": 5.9,
+    "FemaleSmokersAsPctOfPop_2025": 0.3
+  },
+  {
+    "flagCode": "NG",
+    "country": "Nigeria",
+    "TotalSmokersAsPctOfPop_2025": 2.8,
+    "MaleSmokersAsPctOfPop_2025": 5.22,
+    "FemaleSmokersAsPctOfPop_2025": 0.4
+  },
+  {
+    "flagCode": null,
+    "country": "Total",
+    "TotalSmokersAsPctOfPop_2025": 3157.399999999999,
+    "MaleSmokersAsPctOfPop_2025": 4683.5199999999995,
+    "FemaleSmokersAsPctOfPop_2025": 1644.8999999999999
+  }
+]
