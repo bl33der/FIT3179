@@ -1,0 +1,378 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "background": "white",
+  "padding": 5,
+  "width": 500,
+  "height": 420,
+  "title": {"text": "Smoking Trend by Gender", "frame": "group"},
+  "style": "cell",
+  "data": [
+    {"name": "focus_gender_store"},
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/bl33der/FIT3179/main/data/smokers_by_gender.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "toNumber(split(trim(datum.Year), '-')[0])",
+          "as": "YearNum"
+        },
+        {"type": "filter", "expr": "isValid(datum.YearNum)"},
+        {
+          "type": "joinaggregate",
+          "as": ["maxYear"],
+          "ops": ["max"],
+          "fields": ["YearNum"],
+          "groupby": ["Gender"]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.YearNum == datum.maxYear ? 1 : 0",
+          "as": "isEnd"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"YearNum\"]) && isFinite(+datum[\"YearNum\"]) && isValid(datum[\"Smokers\"]) && isFinite(+datum[\"Smokers\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {"type": "filter", "expr": "datum.isEnd == 1"},
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"YearNum\"]) && isFinite(+datum[\"YearNum\"]) && isValid(datum[\"Smokers\"]) && isFinite(+datum[\"Smokers\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "pointermove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "focus_gender_Gender_legend",
+      "value": null,
+      "on": [
+        {
+          "events": [
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "Gender_legend_symbols"
+            },
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "Gender_legend_labels"
+            },
+            {
+              "source": "view",
+              "type": "click",
+              "markname": "Gender_legend_entries"
+            }
+          ],
+          "update": "isDefined(datum.value) ? datum.value : item().items[0].items[0].datum.value",
+          "force": true
+        },
+        {
+          "events": [{"source": "view", "type": "click"}],
+          "update": "!event.item || !datum ? null : focus_gender_Gender_legend",
+          "force": true
+        }
+      ]
+    },
+    {
+      "name": "focus_gender",
+      "update": "vlSelectionResolve(\"focus_gender_store\", \"union\", true, true)"
+    },
+    {
+      "name": "focus_gender_tuple",
+      "update": "focus_gender_Gender_legend !== null ? {fields: focus_gender_tuple_fields, values: [focus_gender_Gender_legend]} : null"
+    },
+    {
+      "name": "focus_gender_tuple_fields",
+      "value": [{"type": "E", "field": "Gender"}]
+    },
+    {
+      "name": "focus_gender_toggle",
+      "value": false,
+      "on": [
+        {
+          "events": {"merge": [{"source": "view", "type": "click"}]},
+          "update": "event.shiftKey"
+        }
+      ]
+    },
+    {
+      "name": "focus_gender_modify",
+      "on": [
+        {
+          "events": {"signal": "focus_gender_tuple"},
+          "update": "modify(\"focus_gender_store\", focus_gender_toggle ? null : focus_gender_tuple, focus_gender_toggle ? null : true, focus_gender_toggle ? focus_gender_tuple : null)"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_layer_0_pathgroup",
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "faceted_path_layer_0_layer_0_main",
+          "data": "source_0",
+          "groupby": ["Gender"]
+        }
+      },
+      "encode": {
+        "update": {
+          "width": {"field": {"group": "width"}},
+          "height": {"field": {"group": "height"}}
+        }
+      },
+      "marks": [
+        {
+          "name": "layer_0_layer_0_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": "x"},
+          "interactive": true,
+          "from": {"data": "faceted_path_layer_0_layer_0_main"},
+          "encode": {
+            "update": {
+              "interpolate": {"value": "monotone"},
+              "stroke": {"scale": "color", "field": "Gender"},
+              "opacity": [
+                {
+                  "test": "length(data(\"focus_gender_store\")) && vlSelectionTest(\"focus_gender_store\", datum)",
+                  "value": 1
+                },
+                {"value": 0.35}
+              ],
+              "tooltip": {
+                "signal": "{\"Gender\": isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"], \"Year\": isValid(datum[\"YearNum\"]) ? datum[\"YearNum\"] : \"\"+datum[\"YearNum\"], \"Smokers('000)\": isValid(datum[\"Smokers\"]) ? datum[\"Smokers\"] : \"\"+datum[\"Smokers\"]}"
+              },
+              "description": {
+                "signal": "\"Year: \" + (format(datum[\"YearNum\"], \"d\")) + \"; Smokers('000): \" + (format(datum[\"Smokers\"], \"d\")) + \"; Gender: \" + (isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"])"
+              },
+              "x": {"scale": "x", "field": "YearNum"},
+              "y": {"scale": "y", "field": "Smokers"},
+              "defined": {
+                "signal": "isValid(datum[\"YearNum\"]) && isFinite(+datum[\"YearNum\"]) && isValid(datum[\"Smokers\"]) && isFinite(+datum[\"Smokers\"])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "layer_0_layer_1_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "interactive": true,
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": [
+            {
+              "test": "length(data(\"focus_gender_store\")) && vlSelectionTest(\"focus_gender_store\", datum)",
+              "value": 1
+            },
+            {"value": 0.35}
+          ],
+          "fill": {"scale": "color", "field": "Gender"},
+          "tooltip": {
+            "signal": "{\"Gender\": isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"], \"Year\": isValid(datum[\"YearNum\"]) ? datum[\"YearNum\"] : \"\"+datum[\"YearNum\"], \"Smokers('000)\": isValid(datum[\"Smokers\"]) ? datum[\"Smokers\"] : \"\"+datum[\"Smokers\"]}"
+          },
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Year: \" + (format(datum[\"YearNum\"], \"d\")) + \"; Smokers('000): \" + (format(datum[\"Smokers\"], \"d\")) + \"; Gender: \" + (isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"])"
+          },
+          "x": {"scale": "x", "field": "YearNum"},
+          "y": {"scale": "y", "field": "Smokers"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "align": {"value": "left"},
+          "dx": {"value": 6},
+          "fontSize": {"value": 11},
+          "fill": {"scale": "color", "field": "Gender"},
+          "opacity": [
+            {
+              "test": "length(data(\"focus_gender_store\")) && vlSelectionTest(\"focus_gender_store\", datum)",
+              "value": 1
+            },
+            {"value": 0.35}
+          ],
+          "description": {
+            "signal": "\"YearNum: \" + (format(datum[\"YearNum\"], \"\")) + \"; Smokers: \" + (format(datum[\"Smokers\"], \"\")) + \"; Gender: \" + (isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"])"
+          },
+          "x": {"scale": "x", "field": "YearNum"},
+          "y": {"scale": "y", "field": "Smokers"},
+          "text": {
+            "signal": "isValid(datum[\"Gender\"]) ? datum[\"Gender\"] : \"\"+datum[\"Gender\"]"
+          },
+          "baseline": {"value": "middle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "source_0", "field": "YearNum"},
+          {"data": "data_0", "field": "YearNum"},
+          {"data": "data_1", "field": "YearNum"}
+        ]
+      },
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": false
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [800, 1800],
+      "range": [{"signal": "height"}, 0],
+      "nice": false,
+      "zero": false
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "fields": [
+          {"data": "source_0", "field": "Gender"},
+          {"data": "data_0", "field": "Gender"},
+          {"data": "data_1", "field": "Gender"}
+        ],
+        "sort": true
+      },
+      "range": "category"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "tickCount": 6,
+      "gridScale": "y",
+      "grid": true,
+      "tickMinStep": 1,
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "tickCount": 6,
+      "gridScale": "x",
+      "grid": true,
+      "tickMinStep": 1,
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Year",
+      "format": "d",
+      "labelAngle": 0,
+      "tickCount": 6,
+      "labelBaseline": "top",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickMinStep": 1,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Smokers('000)",
+      "format": "d",
+      "tickCount": 6,
+      "labelOverlap": true,
+      "tickMinStep": 1,
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "stroke": "color",
+      "symbolType": "circle",
+      "title": "Gender",
+      "encode": {
+        "labels": {
+          "name": "Gender_legend_labels",
+          "interactive": true,
+          "update": {
+            "opacity": [
+              {
+                "test": "(!length(data(\"focus_gender_store\")) || (focus_gender[\"Gender\"] && indexof(focus_gender[\"Gender\"], datum.value) >= 0))",
+                "value": 1
+              },
+              {"value": 0.35}
+            ]
+          }
+        },
+        "symbols": {
+          "name": "Gender_legend_symbols",
+          "interactive": true,
+          "update": {
+            "opacity": [
+              {
+                "test": "(!length(data(\"focus_gender_store\")) || (focus_gender[\"Gender\"] && indexof(focus_gender[\"Gender\"], datum.value) >= 0))",
+                "value": 1
+              },
+              {"value": 0.35}
+            ]
+          }
+        },
+        "entries": {
+          "name": "Gender_legend_entries",
+          "interactive": true,
+          "update": {"fill": {"value": "transparent"}}
+        }
+      },
+      "fill": "color"
+    }
+  ],
+  "config": {"axis": {"grid": true}, "style": {"cell": {"stroke": null}}}
+}
