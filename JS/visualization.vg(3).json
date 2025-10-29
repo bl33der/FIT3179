@@ -1,0 +1,199 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Grouped bar chart of smokers by age and year (with year filter).",
+  "background": "white",
+  "padding": 5,
+  "width": 500,
+  "height": 450,
+  "title": {"text": "Smoking by Age Groups", "anchor": "start", "fontSize": 16},
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/bl33der/FIT3179/main/data/smoker_by_age_updated.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "year_filter === 'All' || datum.Year === year_filter"
+        },
+        {
+          "type": "stack",
+          "groupby": ["Age", "Year"],
+          "field": "Smokers",
+          "sort": {"field": [], "order": []},
+          "as": ["Smokers_start", "Smokers_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Smokers\"]) && isFinite(+datum[\"Smokers\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "year_filter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "2011-12",
+          "2014-15",
+          "2017-18",
+          "2020-21",
+          "2021-22"
+        ],
+        "name": "Filter year: "
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "data": "source_0",
+          "name": "stack_group_layer_0_main",
+          "groupby": ["Age", "Year"],
+          "aggregate": {
+            "fields": [
+              "Smokers_start",
+              "Smokers_start",
+              "Smokers_end",
+              "Smokers_end"
+            ],
+            "ops": ["min", "max", "min", "max"]
+          }
+        }
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "Age",
+            "offset": {"scale": "xOffset", "field": "Year"}
+          },
+          "width": {"signal": "max(0.25, bandwidth('xOffset'))"},
+          "y": {
+            "signal": "min(scale('y',datum[\"min_Smokers_start\"]),scale('y',datum[\"max_Smokers_start\"]),scale('y',datum[\"min_Smokers_end\"]),scale('y',datum[\"max_Smokers_end\"]))"
+          },
+          "y2": {
+            "signal": "max(scale('y',datum[\"min_Smokers_start\"]),scale('y',datum[\"max_Smokers_start\"]),scale('y',datum[\"min_Smokers_end\"]),scale('y',datum[\"max_Smokers_end\"]))"
+          },
+          "clip": {"value": true},
+          "cornerRadiusTopLeft": {"value": 3},
+          "cornerRadiusTopRight": {"value": 3}
+        }
+      },
+      "marks": [
+        {
+          "type": "group",
+          "encode": {
+            "update": {
+              "y": {"field": {"group": "y"}, "mult": -1},
+              "width": {"field": {"group": "width"}}
+            }
+          },
+          "marks": [
+            {
+              "name": "layer_0_marks",
+              "type": "rect",
+              "style": ["bar"],
+              "from": {"data": "stack_group_layer_0_main"},
+              "encode": {
+                "update": {
+                  "fill": {"scale": "color", "field": "Year"},
+                  "tooltip": {
+                    "signal": "{\"Age\": isValid(datum[\"Age\"]) ? datum[\"Age\"] : \"\"+datum[\"Age\"], \"Year\": isValid(datum[\"Year\"]) ? datum[\"Year\"] : \"\"+datum[\"Year\"], \"Smokers ('000)\": format(datum[\"Smokers\"], \"\")}"
+                  },
+                  "ariaRoleDescription": {"value": "bar"},
+                  "description": {
+                    "signal": "\"Age: \" + (isValid(datum[\"Age\"]) ? datum[\"Age\"] : \"\"+datum[\"Age\"]) + \"; Smokers: \" + (format(datum[\"Smokers\"], \"\")) + \"; Year: \" + (isValid(datum[\"Year\"]) ? datum[\"Year\"] : \"\"+datum[\"Year\"]) + \"; Smokers ('000): \" + (format(datum[\"Smokers\"], \"\"))"
+                  },
+                  "width": {"field": {"group": "width"}},
+                  "y": {"scale": "y", "field": "Smokers_end"},
+                  "y2": {"scale": "y", "field": "Smokers_start"}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "domain": {"data": "source_0", "field": "Age", "sort": true},
+      "range": [0, {"signal": "width"}],
+      "paddingInner": 0.2,
+      "paddingOuter": 0.2
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "data": "source_0",
+        "fields": ["Smokers_start", "Smokers_end"]
+      },
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "xOffset",
+      "type": "band",
+      "domain": {"data": "source_0", "field": "Year", "sort": true},
+      "range": [0, {"signal": "bandwidth('x')"}]
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": ["2011-12", "2014-15", "2017-18", "2020-21", "2021-22"],
+      "range": ["#d6f0e0", "#a8e1b9", "#66c188", "#2f8f55", "#184f2f"]
+    }
+  ],
+  "axes": [
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Age",
+      "labelAngle": 0,
+      "labelBaseline": "top",
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Smokers ('000)",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "legends": [{"title": "Year", "fill": "color", "symbolType": "square"}],
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 13},
+    "legend": {"orient": "top-left"}
+  }
+}
